@@ -1,0 +1,23 @@
+<div class="container post" id="<%= dom_id post %>">
+  <%= link_to(post) do %>
+    <p class="p3">
+      <strong>Title:</strong>
+      <%= post.title %>
+      <span class="badge text-bg-primary float-end"><%= pluralize(post.views, "view") %></span>
+    </p>
+  <% end %>
+  <div class="post-body clearfix">
+    <%= post.content %>
+    <p class="small float-end">Written by: <%= post&.user&.name || "Anonymous" %> </p>
+  </div>
+  <% if @owns_post %>
+    <div class="link-group text-right">
+      <%= link_to edit_post_path(post), class: "icon-link" do %>
+        <i class="fa-solid fa-pencil"></i>
+      <% end %>
+      <%= link_to post, method: :delete, class: "icon-link"  do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>
