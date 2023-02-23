@@ -43,3 +43,14 @@
   .p3 {
     font-family: "Lucida Console", "Courier New", monospace;
   }
+
+  .strain {
+    width: 18rem;
+    height: 30rem;
+    margin-bottom: 5rem;
+    padding: 10px;
+  }
+
+  .page {
+    padding-top: 15px;
+  }

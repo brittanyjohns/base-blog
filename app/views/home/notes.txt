@@ -1,0 +1,24 @@
+id: 65591
+averageRating: 4.640625
+category: Hybrid
+flowerImageSvg: https://public.leafly.com/strains/flowers/original-glue-flower.svg
+name: GG4
+nugImage: https://s3-us-west-2.amazonaws.com/leafly-images/flower-images/gg-4.jpg
+phenotype: Hybrid
+reviewCount: 5056
+shortDescriptionPlain: Original Glue (GG4) is a potent hybrid strain that won 1st place in the 2014 Los Angeles Cannabis Cup.
+slug: original-glue
+strainTopTerp: caryophyllene
+subtitle: aka Gorilla Glue, Original Glue, Gorilla Glue #4, Glue
+thc: 20.0
+topEffect: Relaxed
+cannabinoids: {"cbc"=>{"displayName"=>"CBC", "order"=>3, "percentile25"=>nil, "percentile50"=>0.0, "percentile75"=>nil}, "cbd"=>{"displayName"=>"CBD", "order"=>2, "percentile25"=>0.0, "percentile50"=>0.0, "percentile75"=>0.0}, "cbg"=>{"displayName"=>"CBG", "order"=>4, "percentile25"=>nil, "percentile50"=>0.0, "percentile75"=>nil}, "thc"=>{"displayName"=>"THC", "order"=>1, "percentile25"=>18.0, "percentile50"=>20.0, "percentile75"=>21.0}, "thcv"=>{"displayName"=>"THCV", "order"=>5, "percentile25"=>nil, "percentile50"=>0.0, "percentile75"=>nil}}
+effects: {"aroused"=>{"name"=>"aroused", "icon"=>nil, "score"=>0.18541633754222, "type"=>nil, "votes"=>nil}, "creative"=>{"name"=>"creative", "icon"=>nil, "score"=>-0.195455338446686, "type"=>nil, "votes"=>nil}, "energetic"=>{"name"=>"energetic", "icon"=>nil, "score"=>-0.283324993763446, "type"=>nil, "votes"=>nil}, "euphoric"=>{"name"=>"euphoric", "icon"=>nil, "score"=>0.439837941035453, "type"=>nil, "votes"=>nil}, "focused"=>{"name"=>"focused", "icon"=>nil, "score"=>-0.266658345447374, "type"=>nil, "votes"=>nil}, "giggly"=>{"name"=>"giggly", "icon"=>nil, "score"=>0.322514658998055, "type"=>nil, "votes"=>nil}, "happy"=>{"name"=>"happy", "icon"=>nil, "score"=>0.213077318017601, "type"=>nil, "votes"=>nil}, "hungry"=>{"name"=>"hungry", "icon"=>nil, "score"=>0.525791552527514, "type"=>nil, "votes"=>nil}, "relaxed"=>{"name"=>"relaxed", "icon"=>nil, "score"=>0.629435051047751, "type"=>nil, "votes"=>nil}, "sleepy"=>{"name"=>"sleepy", "icon"=>nil, "score"=>0.556431211278764, "type"=>nil, "votes"=>nil}, "talkative"=>{"name"=>"talkative", "icon"=>nil, "score"=>-0.0369396664843591, "type"=>nil, "votes"=>nil}, "tingly"=>{"name"=>"tingly", "icon"=>nil, "score"=>0.116059718868863, "type"=>nil, "votes"=>nil}, "uplifted"=>{"name"=>"uplifted", "icon"=>nil, "score"=>-0.0296535119543336, "type"=>nil, "votes"=>nil}}
+terps: {"caryophyllene"=>{"name"=>"caryophyllene", "description"=>nil, "score"=>0.841666666666667}, "humulene"=>{"name"=>"humulene", "description"=>nil, "score"=>0.245}, "limonene"=>{"name"=>"limonene", "description"=>nil, "score"=>0.4}, "linalool"=>{"name"=>"linalool", "description"=>nil, "score"=>0.115}, "myrcene"=>{"name"=>"myrcene", "description"=>nil, "score"=>0.41}, "ocimene"=>{"name"=>"ocimene", "description"=>nil, "score"=>0.015}, "pinene"=>{"name"=>"pinene", "description"=>nil, "score"=>0.118333333333333}, "terpinolene"=>{"name"=>"terpinolene", "description"=>nil, "score"=>0.0249999999999999}}
+distanceMi: 2.05707041162762
+
+rails g scaffold Strain average_rating:float category flower_svg name nug_image phenotype review_count:integer short_description slug top_terp subtitle thc:float top_effect distance
+
+rails g model Cannabinoid display_name order:integer percentile_25:float percentile_50:float percentile_75:float strain_id:integer
+rails g model Effect name icon score:float type votes:integer strain_id:integer
+rails g model Terp name description score:float strain_id:integer

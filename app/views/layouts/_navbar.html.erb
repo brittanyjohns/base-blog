@@ -16,6 +16,8 @@
           <%= link_to 'Sign Out', destroy_user_session_path, class: 'nav-link', data: { turbo_method: :delete } if user_signed_in? %>
         </li>
         <li class="nav-item"><%= link_to "Posts", posts_path, class: "nav-link" if user_signed_in? %></li>
+        <li class="nav-item"><%= link_to "Strains", strains_path, class: "nav-link" if user_signed_in? %></li>
+        <li class="nav-item"><%= link_to "Seed Data", seed_data_path, class: "nav-link" if user_signed_in? %></li>
       </ul>
     </div>
   </div>

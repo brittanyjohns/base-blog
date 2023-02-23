@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_21_210455) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_22_175050) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -49,6 +49,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_210455) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "cannabinoids", force: :cascade do |t|
+    t.string "display_name"
+    t.integer "order"
+    t.float "percentile_25"
+    t.float "percentile_50"
+    t.float "percentile_75"
+    t.integer "strain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "effects", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.float "score"
+    t.string "type"
+    t.integer "votes"
+    t.integer "strain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -56,6 +78,35 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_210455) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+  end
+
+  create_table "strains", force: :cascade do |t|
+    t.integer "original_id"
+    t.float "average_rating"
+    t.string "category"
+    t.string "flower_svg"
+    t.string "name"
+    t.string "nug_image"
+    t.string "phenotype"
+    t.integer "review_count"
+    t.string "short_description"
+    t.string "slug"
+    t.string "top_terp"
+    t.string "subtitle"
+    t.float "thc"
+    t.string "top_effect"
+    t.float "distance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "terps", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.float "score"
+    t.integer "strain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

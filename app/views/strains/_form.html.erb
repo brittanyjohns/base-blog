@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@strain) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :average_rating %>
+    <%= f.input :category %>
+    <%= f.input :flower_svg %>
+    <%= f.input :name %>
+    <%= f.input :nug_image %>
+    <%= f.input :phenotype %>
+    <%= f.input :review_count %>
+    <%= f.input :short_description %>
+    <%= f.input :slug %>
+    <%= f.input :top_terp %>
+    <%= f.input :subtitle %>
+    <%= f.input :thc %>
+    <%= f.input :top_effect %>
+    <%= f.input :distance %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

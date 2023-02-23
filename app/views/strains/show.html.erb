@@ -1,0 +1,30 @@
+<div class="page row">
+  <div class="col">
+    <%= render @strain %>
+  </div>
+  <div class="col">
+    <h3>Effects</h3>
+    <% @strain.effects.each do |effect|%>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= icon_for effect.name %></li>
+      </ul>
+    <% end %>
+  </div>
+  <div class="col">
+    <h3>Terps</h3>
+    <% @strain.terps.each do |terp|%>
+      <p><%= terp.name %> </p>
+    <% end %>
+  </div>
+  <div class="col">
+    <h3>Cannabinoids</h3>
+    <% @strain.cannabinoids.each do |cannabinoid|%>
+      <p><%= cannabinoid.name if cannabinoid.show? %> </p>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <%= link_to "Edit this strain", edit_strain_path(@strain) %> |
+  <%= link_to "Back to strains", strains_path %>
+  <%= button_to "Destroy this strain", @strain, method: :delete %>
+</div>

@@ -1,0 +1,6 @@
+<h1><%=params['id']%> </h1>
+<% @response_data.each do |hit| %>
+  <div class='well'>
+    <p><%= hit['text'] %></p>
+  </div>
+<% end %>

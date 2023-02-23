@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  average_rating: 1.5
+  category: MyString
+  flower_svg: MyString
+  name: MyString
+  nug_image: MyString
+  phenotype: MyString
+  review_count: 1
+  short_description: MyString
+  slug: MyString
+  top_terp: MyString
+  subtitle: MyString
+  thc: 1.5
+  top_effect: MyString
+  distance: 1.5
+
+two:
+  average_rating: 1.5
+  category: MyString
+  flower_svg: MyString
+  name: MyString
+  nug_image: MyString
+  phenotype: MyString
+  review_count: 1
+  short_description: MyString
+  slug: MyString
+  top_terp: MyString
+  subtitle: MyString
+  thc: 1.5
+  top_effect: MyString
+  distance: 1.5

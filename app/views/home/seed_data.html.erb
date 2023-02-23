@@ -1,0 +1,9 @@
+<h1>Leafly <small><%= pluralize(@response_data&.count, 'record') %> AR records: <%= @strains.count %></small></h1>
+<div class="container" id="strains">
+  <% @strains.order(average_rating: :asc).limit(10).each do |strain| %>
+    <div class="col-md-3">
+      <%= render partial: "strains/strain", locals: {strain: strain} %>
+    </div>
+  <% end %>
+</div>
+<%= link_to "New strain", new_strain_path %>

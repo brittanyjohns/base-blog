@@ -1,0 +1,11 @@
+<div class="card strain" id="<%= dom_id strain %>">
+  <p class="small"><%= strain.id %>-<%= strain.original_id %></p>
+  <img src="<%= strain.nug_image %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"><%= strain.category %> | THC: <%= strain.thc %></p>
+    <h5 class="card-title"><%= link_to strain.name, strain_path(strain.id)%> </h5>
+    <%= star_rating(strain.average_rating) %> <small><%= strain.average_rating.round(2) %></small>
+    <p class="card-text"><%= truncate(strain.short_description) %>
+    </p>
+  </div>
+</div>
