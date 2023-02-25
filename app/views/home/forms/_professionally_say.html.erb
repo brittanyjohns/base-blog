@@ -1,5 +1,6 @@
-<%= simple_form_for :post, url: "/openai_question", class: "form-control", method: :post do |form| %>
-  <%= form.label :question,  "How do you professionally say, *your statement* in a corporate setting?" %>
-  <%= form.text_field :question %>
-  <%= form.submit "Send" %>
+<%= simple_form_for :professionally_say, url: "/openai_question", method: :post do |form| %>
+  <div class="col-md-12">
+    "How do you professionally say, "<%= form.text_field :question, class: "form-control inline", placeholder: "this meeting should have been an email" %>" in a corporate setting? 
+    <%= form.submit "Send", class: "btn btn-primary" %>
+  </div>
 <% end %>
