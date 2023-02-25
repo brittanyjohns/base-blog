@@ -4,7 +4,7 @@ class StrainsController < ApplicationController
   # GET /strains or /strains.json
   def index
     @strain_count = Strain.all.count
-    @strains = Strain.last(10)
+    @strains = Strain.first(12)
   end
 
   # GET /strains/1 or /strains/1.json

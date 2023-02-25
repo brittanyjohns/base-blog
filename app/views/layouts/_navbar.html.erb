@@ -18,6 +18,7 @@
         <li class="nav-item"><%= link_to "Posts", posts_path, class: "nav-link" if user_signed_in? %></li>
         <li class="nav-item"><%= link_to "Strains", strains_path, class: "nav-link" if user_signed_in? %></li>
         <li class="nav-item"><%= link_to "Seed Data", seed_data_path, class: "nav-link" if user_signed_in? %></li>
+        <li class="nav-item"><%= link_to "Ask A Question", question_path, class: "nav-link" if user_signed_in? %></li>
       </ul>
     </div>
   </div>

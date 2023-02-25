@@ -15,7 +15,7 @@
       <%= link_to edit_post_path(post), class: "icon-link" do %>
         <i class="fa-solid fa-pencil"></i>
       <% end %>
-      <%= link_to post, method: :delete, class: "icon-link"  do %>
+      <%= link_to post, data: { "turbo-method": :delete }, class: "icon-link"  do %>
         <i class="fa-solid fa-trash"></i>
       <% end %>
     </div>
