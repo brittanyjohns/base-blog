@@ -14,11 +14,10 @@ class OpenaiPrompt
   def call
     connection =
       Faraday.new do |faraday|
-        faraday.ssl[:verify] = false
+        # faraday.ssl[:verify] = false
         faraday.headers = headers
       end
     response = connection.post(URL, body)
-    puts "response: #{response.inspect}"
     json = JSON.parse(response.body)
     json["choices"].first["text"]
   end

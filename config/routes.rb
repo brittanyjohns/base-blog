@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "seed_data", to: "home#seed_data"
   get "question", to: "home#question_form"
   post "openai_question", to: "home#openai_question"
+  post "resume_question", to: "resume#openai_question"
 end
