@@ -1,3 +1,5 @@
+require "httparty"
+
 class Leafly
   include HTTParty
   base_uri "consumer-api.leafly.com/api"
